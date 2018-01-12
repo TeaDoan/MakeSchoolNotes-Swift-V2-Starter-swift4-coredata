@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fMF-Qi-WH0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notes -->
+        <scene sceneID="dVN-r5-8ll">
+            <objects>
+                <tableViewController id="u2p-Xo-LIX" customClass="ListNotesTableViewController" customModule="MakeSchoolNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="HJp-ZC-yAU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listNotesTableViewCell" id="e5G-wG-mNh" customClass="ListNotesTableViewCell" customModule="MakeSchoolNotes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e5G-wG-mNh" id="Du3-q9-QAa">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xqa-vj-85Y">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="59.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note Tittle " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv1-C7-Pgf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" red="0.32549019607843138" green="0.6588235294117647" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Modified Timestamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJ9-c8-FS2">
+                                                    <rect key="frame" x="0.0" y="30" width="345" height="29.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.40392156862745099" green="0.396078431372549" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wJ9-c8-FS2" firstAttribute="height" secondItem="fv1-C7-Pgf" secondAttribute="height" id="2Gx-9N-oYm"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Xqa-vj-85Y" secondAttribute="trailing" constant="15" id="EP7-TV-uQH"/>
+                                        <constraint firstAttribute="bottom" secondItem="Xqa-vj-85Y" secondAttribute="bottom" id="UlM-2x-Ooh"/>
+                                        <constraint firstItem="Xqa-vj-85Y" firstAttribute="leading" secondItem="Du3-q9-QAa" secondAttribute="leading" constant="15" id="bDR-63-vsX"/>
+                                        <constraint firstItem="Xqa-vj-85Y" firstAttribute="top" secondItem="Du3-q9-QAa" secondAttribute="top" id="boo-LF-bXB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="noteModificationTimeLabel" destination="wJ9-c8-FS2" id="jUE-fJ-K2z"/>
+                                    <outlet property="noteTittleLabel" destination="fv1-C7-Pgf" id="zob-7g-Jc9"/>
+                                    <segue destination="qD8-6C-i0l" kind="show" identifier="displayNote" id="i4d-gt-4X2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="u2p-Xo-LIX" id="08P-fA-Fdr"/>
+                            <outlet property="delegate" destination="u2p-Xo-LIX" id="msW-Ug-yhm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Notes " id="lGg-rV-ZHJ" userLabel="Notes">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RuT-3q-2O1">
+                            <connections>
+                                <segue destination="qD8-6C-i0l" kind="show" identifier="addNote" id="ndv-mk-EXm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dXi-TP-ue3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="271"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="4WQ-QF-Bf7">
+            <objects>
+                <viewController id="qD8-6C-i0l" customClass="DisplayNoteViewController" customModule="MakeSchoolNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OJU-VQ-TtT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jdu-GS-Xyd">
+                                <rect key="frame" x="15" y="74" width="345" height="30"/>
+                                <color key="textColor" red="0.11907891242708013" green="0.20633072919248352" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zqa-WL-q3r">
+                                <rect key="frame" x="15" y="114" width="345" height="494"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="1" green="0.24116445116898677" blue="0.29453251496216593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jdu-GS-Xyd" firstAttribute="leading" secondItem="qfG-at-woh" secondAttribute="leading" constant="15" id="CPd-YH-JUv"/>
+                            <constraint firstItem="zqa-WL-q3r" firstAttribute="leading" secondItem="qfG-at-woh" secondAttribute="leading" constant="15" id="NTa-R7-mYv"/>
+                            <constraint firstItem="Jdu-GS-Xyd" firstAttribute="top" secondItem="qfG-at-woh" secondAttribute="top" constant="10" id="UGP-Sb-yKN"/>
+                            <constraint firstItem="zqa-WL-q3r" firstAttribute="top" secondItem="Jdu-GS-Xyd" secondAttribute="bottom" constant="10" id="edR-ig-i6P"/>
+                            <constraint firstItem="qfG-at-woh" firstAttribute="bottom" secondItem="zqa-WL-q3r" secondAttribute="bottom" constant="15" id="h8l-Bx-46a"/>
+                            <constraint firstItem="qfG-at-woh" firstAttribute="trailing" secondItem="Jdu-GS-Xyd" secondAttribute="trailing" constant="15" id="tVJ-Cn-xAv"/>
+                            <constraint firstItem="qfG-at-woh" firstAttribute="trailing" secondItem="zqa-WL-q3r" secondAttribute="trailing" constant="15" id="uYO-0b-Qrh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qfG-at-woh"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="N6t-xQ-PE2">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hiA-hV-TVg">
+                            <connections>
+                                <segue destination="qYi-F3-LxG" kind="unwind" identifier="cancel" unwindAction="unwindWithSegueWith_segue:" id="kTa-zb-bW1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="d5H-ir-52i">
+                            <connections>
+                                <segue destination="qYi-F3-LxG" kind="unwind" identifier="save" unwindAction="unwindWithSegueWith_segue:" id="ulH-Pd-o2c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="contentTextView" destination="zqa-WL-q3r" id="ubl-sH-Jpt"/>
+                        <outlet property="tittleTextField" destination="Jdu-GS-Xyd" id="w56-qI-Vv0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ykg-eF-Zke" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="qYi-F3-LxG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1916" y="270.31484257871068"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="otn-U6-c8F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fMF-Qi-WH0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qFJ-wv-Fr1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="u2p-Xo-LIX" kind="relationship" relationship="rootViewController" id="q42-e0-zob"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Whg-H6-SXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="272"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ndv-mk-EXm"/>
+    </inferredMetricsTieBreakers>
+</document>
