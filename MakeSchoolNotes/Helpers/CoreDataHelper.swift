@@ -24,6 +24,7 @@ struct coreDataHelper {
         let note = NSEntityDescription.insertNewObject(forEntityName: "Note", into: context) as! Note
         return note
     }
+    
     static func saveNote(){
         do {
             try context.save()
@@ -33,6 +34,8 @@ struct coreDataHelper {
             print("Could not save\(error.localizedDescription)")
     }
   }
+    
+    
     static func detele(note:Note){
         
             context.delete(note)
@@ -51,4 +54,5 @@ struct coreDataHelper {
         }
         
     }
+    
 }

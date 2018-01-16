@@ -9,22 +9,34 @@
 import UIKit
 import CoreData
 
+
+
+
+
 class ListNotesTableViewController: UITableViewController {
+   
+    
+    
+   
     var notes = [Note](){
         didSet {
             tableView.reloadData()
         }
     }
     
-    @IBAction func unwindWithSegue( _segue:UIStoryboardSegue){
-        notes = coreDataHelper.retriveNotes()
-        
-    }
+    
+   
+//    @IBAction func unwindWithSegue( _segue:UIStoryboardSegue){
+//        notes = coreDataHelper.retriveNotes()
+//
+//    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         notes = coreDataHelper.retriveNotes()
+        
+        
     }
     
     
@@ -34,8 +46,9 @@ class ListNotesTableViewController: UITableViewController {
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listNotesTableViewCell", for: indexPath) as! ListNotesTableViewCell
         let note = notes[indexPath.row]
-        cell.noteTittleLabel.text = note.tittle
+        cell.noteTittleLabel.text = note.title
         cell.noteModificationTimeLabel.text = note.modificationTime?.convertToString() ?? "unknonw"
+
         
         return cell
         
@@ -53,6 +66,8 @@ class ListNotesTableViewController: UITableViewController {
             
             print ("note cell tapped")
         case "addNote":
+            
+            
             print("add new note bar tapped")
         default:
             print("unexpected segue identifier")

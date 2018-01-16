@@ -16,6 +16,7 @@
 		2E4A07AF1C42F539007F415F /* Date+convertToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A07AE1C42F539007F415F /* Date+convertToString.swift */; };
 		2E4A07B11C42F599007F415F /* ListNotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A07B01C42F599007F415F /* ListNotesTableViewCell.swift */; };
 		848490D31D68F5610043C60B /* MakeSchoolNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 848490D11D68F5610043C60B /* MakeSchoolNotes.xcdatamodeld */; };
+		ADC0B79C220EE741A61E026C /* Pods_MakeSchoolNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E38482A9D5A8A6C407E0D8 /* Pods_MakeSchoolNotes.framework */; };
 		B04445E72008542000C3C4C2 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04445E62008542000C3C4C2 /* CoreDataHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		21E38482A9D5A8A6C407E0D8 /* Pods_MakeSchoolNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakeSchoolNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4A07901C42F3B0007F415F /* MakeSchoolNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeSchoolNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E4A07931C42F3B0007F415F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E4A07981C42F3B0007F415F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,8 +45,10 @@
 		2E4A07AA1C42F497007F415F /* DisplayNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayNoteViewController.swift; sourceTree = "<group>"; };
 		2E4A07AE1C42F539007F415F /* Date+convertToString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+convertToString.swift"; sourceTree = "<group>"; };
 		2E4A07B01C42F599007F415F /* ListNotesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesTableViewCell.swift; sourceTree = "<group>"; };
+		62F8654C9F47D3F95AB4BF67 /* Pods-MakeSchoolNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeSchoolNotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MakeSchoolNotes/Pods-MakeSchoolNotes.debug.xcconfig"; sourceTree = "<group>"; };
 		848490D21D68F5610043C60B /* MakeSchoolNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MakeSchoolNotes.xcdatamodel; sourceTree = "<group>"; };
 		B04445E62008542000C3C4C2 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		E037D4E75B5DD5CBFFABE733 /* Pods-MakeSchoolNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeSchoolNotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-MakeSchoolNotes/Pods-MakeSchoolNotes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADC0B79C220EE741A61E026C /* Pods_MakeSchoolNotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +68,8 @@
 			children = (
 				2E4A07921C42F3B0007F415F /* MakeSchoolNotes */,
 				2E4A07911C42F3B0007F415F /* Products */,
+				C93B982DCF8A3AB913EE0C2C /* Pods */,
+				C23389E908365EF69B1868F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +139,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C23389E908365EF69B1868F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21E38482A9D5A8A6C407E0D8 /* Pods_MakeSchoolNotes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C93B982DCF8A3AB913EE0C2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62F8654C9F47D3F95AB4BF67 /* Pods-MakeSchoolNotes.debug.xcconfig */,
+				E037D4E75B5DD5CBFFABE733 /* Pods-MakeSchoolNotes.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,10 +163,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E4A07A21C42F3B0007F415F /* Build configuration list for PBXNativeTarget "MakeSchoolNotes" */;
 			buildPhases = (
+				18F297BD85333053E491978A /* [CP] Check Pods Manifest.lock */,
 				2E4A078C1C42F3B0007F415F /* Sources */,
 				2E4A078D1C42F3B0007F415F /* Frameworks */,
 				2E4A078E1C42F3B0007F415F /* Resources */,
 				2E4A07BB1C42F8B5007F415F /* Embed Frameworks */,
+				C010681228DAA9FDDAD1F2A5 /* [CP] Embed Pods Frameworks */,
+				7497AE63F187787F8762E6A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,6 +226,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18F297BD85333053E491978A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MakeSchoolNotes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7497AE63F187787F8762E6A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MakeSchoolNotes/Pods-MakeSchoolNotes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C010681228DAA9FDDAD1F2A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MakeSchoolNotes/Pods-MakeSchoolNotes-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTProgressBar/GTProgressBar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTProgressBar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MakeSchoolNotes/Pods-MakeSchoolNotes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2E4A078C1C42F3B0007F415F /* Sources */ = {
@@ -339,6 +420,7 @@
 		};
 		2E4A07A31C42F3B0007F415F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62F8654C9F47D3F95AB4BF67 /* Pods-MakeSchoolNotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -357,6 +439,7 @@
 		};
 		2E4A07A41C42F3B0007F415F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E037D4E75B5DD5CBFFABE733 /* Pods-MakeSchoolNotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (

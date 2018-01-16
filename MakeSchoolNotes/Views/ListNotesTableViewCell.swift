@@ -11,7 +11,9 @@ import UIKit
 class ListNotesTableViewCell: UITableViewCell {
     @IBOutlet weak var noteTittleLabel: UILabel!
     
+    @IBOutlet weak var progressBarView: UIImageView!
     @IBOutlet weak var noteModificationTimeLabel: UILabel!
     
     
 }
+
